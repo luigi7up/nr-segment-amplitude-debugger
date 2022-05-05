@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
-// @author       Luka Eterovic
+// @author       Luka
 // @match        https://staging-one.newrelic.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=newrelic.com
 // @grant        none
@@ -13,19 +13,17 @@
 (function() {
     'use strict';
 
-    // Your code here...
-
+    //In order to redefine analytics.track and page methods we need to wait until Segment is loaded and properly initialized
     let checkExist = setInterval(function() {
-        console.log("waiting for window.analytics.track and window.analytics.page...")
-
+        window.console.log("waiting for window.analytics.track and window.analytics.page...")
         if(window.analytics.track !== undefined && window.analytics.page !== undefined){
             init();
             clearInterval(checkExist);
         }
-    }, 200); // check every 100ms
+    }, 3000); // check every 3000ms
 
 
-    function init(){
+function init(){
 
         let _track = window.analytics.track;
         let _page = window.analytics.page;
@@ -84,10 +82,14 @@
         window.analytics.page = function(event) {
             elemDiv.innerHTML = '<b>Page event was registered</b>';
             elemDiv.innerHTML += `${arguments[0]}`
+
             _page.apply( this, arguments );
         }
 
 
     }
+
     //////////
 })();
+
+
