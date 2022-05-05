@@ -9,7 +9,7 @@ NOTE: The code will only run in the https://staging-one.newrelic.com/
 1. Install [Temeprmonkey chrome extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en)
 2. Once installed pin its icon to the browser top bar it so that you can turn it on an off as you like
 3. Click on the Tampermonkey icon in the browser and from the menu select Create new script
-4. Copy and paste the whole JS code found in the nr-segment-amplitude-debugger.js instead of the code that you see
+4. Copy and paste the whole JS code found in the [nr-segment-amplitude-debugger.js @ master branch](https://github.com/luigi7up/nr-segment-amplitude-debugger/tree/master) instead of the code that you see
 5. File > Save
 6. Navigate to https://staging-one.newrelic.com/ and you should see a small pink reckangle appearing in the right hand side 
 
