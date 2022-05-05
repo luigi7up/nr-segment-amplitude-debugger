@@ -40,7 +40,9 @@ function init(){
                 padding:1rem;
                 color:#fff;
                 border-radius:4px;
-                font: 12px "Courier New", Courier, "Lucida Sans Typewriter", serif;`;
+                font: 12px "Courier New", Courier, "Lucida Sans Typewriter", serif;
+                height: 50vh;
+                overflow: scroll;`;
         elemDiv.innerHTML = '<b>Segment/Amplitude debugging</b>';
         document.body.appendChild(elemDiv);
 
